@@ -10,6 +10,8 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/behaviors.h>
 
+#include <locale/keys_da.h> // https://github.com/joelspadin/zmk-locales/blob/main/include/locale/keys_da.h
+
 #define ALPHA 0
 #define NAV 1
 #define SYM 2
@@ -27,34 +29,24 @@
 
         alpha_layer {
             display-name = "Alpha";
-            // --------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |  MUTE |  PP   |  Y  |  U   |  I  |  O  |  P  | BSPC |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |  LALT |  RALT |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |               |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
             bindings = <
-                &kp ESC   &kp X &kp P &kp D &kp M &kp K &kp C_MUTE &kp C_PP &kp MINUS &kp U  &kp O     &kp Y   &kp Z    &kp ESC
-                &kp Q     &kp S &kp N &kp T &kp L &kp F &kp LALT   &kp RALT &kp COMMA &kp A  &kp E     &kp I   &kp C &kp W
-                &kp TAB   &kp V &kp B &kp G &kp H &kp J                     &kp EQUAL &kp DOT  &kp BSPC &kp FSLH &kp SQT &kp DEL
-                                      &kp LGUI &lt NUM UNDER &lt NAV SPACE              &lt SYM R &kp RET &kp RALT
+                &kp ESC   &kp X &kp P &kp D &kp M      &kp K         &kp C_MUTE           &kp C_VOL_UP &kp MINUS &kp U   &kp O    &kp Y       &kp Z      &kp ESC
+                &kp Q     &kp S &kp N &kp T &kp L      &kp F         &kp C_PP             &kp C_VOL_DN &kp COMMA &kp A   &kp E    &kp I       &kp C      &kp W
+                &kp TAB   &kp V &kp B &kp G &kp H      &kp J                                           &kp EQUAL &kp DOT &kp BSPC &kp DA_FSLH &kp DA_SQT &kp DEL
+                                            &caps_word &lt NUM UNDER &lt NAV SPACE        &lt SYM R    &kp RET   &kp ESC
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
-        // navigation_layer {
-        //     display-name = "Navigation";
-        //     // -----------------------------------------------------------------------------------------
-        //     // |  TAB |  1  |  2  |  3  |  4  |  5    |  LCTRL | RCTRL |  6  |  7  |  8  |  9  |  0  | BSPC |
-        //     // | CTRL | BT1 | BT2 | BT3 | BT4 | BT5   |  LALT  | RALT  | LFT | DWN |  UP | RGT |     |      |
-        //     // | SHFT | BTCR| RGB | RST | BOOT| Unlock|        |       |     |     |     |     |     |      |
-        //     //                    | GUI |     | SPC   |        | ENT   |     | ALT |
-        //     bindings = <
-        //         &kp TAB   &kp N1       &kp N2          &kp N3       &kp N4       &kp N5       &kp LCTRL &kp RCTRL &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-        //         &kp LCTRL &bt BT_SEL 0 &bt BT_SEL 1    &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp LALT  &kp RALT  &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-        //         &kp LSHFT &bt BT_CLR   &rgb_ug RGB_TOG &sys_reset   &bootloader  &studio_unlock                   &trans   &trans   &trans &trans    &trans &trans
-        //                                                &kp LGUI     &trans       &kp SPACE                        &kp LGUI &trans   &kp SPACE
-        //     >;
-        // };
+        navigation_layer {
+            display-name = "Navigation";
+            bindings = <
+                &trans &kp F1    &kp F2    &kp F5    &kp F6    &kp F12   &rgb_ug RGB_OFF        &rgb_ug RGB_BRI &kp LA(F12)  &kp PG_UP &kp UP   &kp PG_DN &kp LC(DA_AE)  &trans
+                &trans &kp LGUI  &kp LALT  &kp LCTRL &kp LSHFT &kp LC(A) &rgb_ug RGB_TOG        &rgb_ug RGB_BRD &kp LS(F12)  &kp LEFT  &kp DOWN &kp RIGHT &kp LC(DA_SQT) &trans
+                &trans &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp AC(Y)                                        &kp LA(LEFT) &kp HOME  &trans   &kp END   &kp LA(RIGHT)  &trans
+                                                     &trans    &trans    &trans                 &trans          &trans       &kp F11
+            >;
+        };
 
         symbol_layer {
             display-name = "Symbol";
