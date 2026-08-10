@@ -79,6 +79,13 @@
             tapping-term-ms = <HM_TAPPING_TERM_FAST>;   // Adjust time (in ms) to trigger the hold
             bindings = <&kp>, <&qu_macro>;
         };
+
+        // Undead keys. Press space after a dead key.
+        undead: undead_macro {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>; // Must be 1
+            bindings = <&macro_param_1to1>, <&macro_tap &kp MACRO_PLACEHOLDER &kp SPACE>;
+        };
     };
 };
 
@@ -110,10 +117,10 @@
         symbol_layer {
             display-name = "Symbol";
             bindings = <
-                &trans &kp DA_CURREN &kp DA_LT    &kp DA_GT   &kp DA_DQT   &kp DA_GRAVE &none            &none &kp DA_AMPS &kp DA_RPAR  &kp DA_LBRC &kp DA_RBRC &kp DA_PRCNT &trans
-                &none  &kp DA_EXCL   &kp DA_MINUS &kp DA_PLUS &kp DA_EQUAL &kp DA_HASH  &none            &none &kp DA_SEMI &kp DA_LPAR  &kp DA_LBKT &kp DA_RBKT &kp DA_QMARK &none
-                &trans &kp DA_CARET  &kp DA_FSLH  &kp DA_STAR &kp DA_BSLH  &kp DA_TILDE                        &kp DA_PIPE &kp DA_COLON &trans      &kp DA_DLLR &kp DA_AT    &trans
-                                                  &trans      &trans       &kp SPACE                           &trans      &trans       &trans
+                &trans &kp DA_CURREN     &kp DA_LT    &kp DA_GT   &kp DA_DQT   &undead DA_GRAVE &none            &none &kp DA_AMPS &kp DA_RPAR  &kp DA_LBRC &kp DA_RBRC &kp DA_PRCNT &trans
+                &none  &kp DA_EXCL       &kp DA_MINUS &kp DA_PLUS &kp DA_EQUAL &kp DA_HASH      &none            &none &kp DA_SEMI &kp DA_LPAR  &kp DA_LBKT &kp DA_RBKT &kp DA_QMARK &none
+                &trans &undead DA_CARET  &kp DA_FSLH  &kp DA_STAR &kp DA_BSLH  &undead DA_TILDE                        &kp DA_PIPE &kp DA_COLON &trans      &kp DA_DLLR &kp DA_AT    &trans
+                                                  &trans      &trans       &kp SPACE                           &trans      &trans       &none
             >;
         };
 
@@ -123,7 +130,7 @@
                 &trans &none &kp DA_LBKT  &kp DA_RBKT &none        &none &none            &none &none     &kp N7 &kp N8 &kp N9 &none   &trans
                 &none  &none &kp DA_MINUS &kp DA_PLUS &kp DA_EQUAL &none &none            &none &kp COMMA &kp N4 &kp N5 &kp N6 &kp DOT &none
                 &trans &none &kp DA_FSLH  &kp DA_STAR &kp DA_COLON &trans                       &none     &kp N1 &kp N2 &kp N3 &none   &trans
-                                          &none       &trans       &kp SPACE                    &kp N0    &trans &trans
+                                          &none       &trans       &kp SPACE                    &kp N0    &trans &none
             >;
         };
     };
