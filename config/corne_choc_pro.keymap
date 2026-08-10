@@ -56,19 +56,19 @@
             timeout-ms = <COMBO_TERM>;
             require-prior-idle-ms = <HM_PRIOR_IDLE>;
             key-positions = <9 23>;
-            bindings = <&kp DK_A_RING>;
+            bindings = <&kp DA_A_RING>;
         };
         combo_ae {
             timeout-ms = <COMBO_TERM>;
             require-prior-idle-ms = <HM_PRIOR_IDLE>;
             key-positions = <8 9>;
-            bindings = <&kp DK_AE>;
+            bindings = <&kp DA_AE>;
         }
         combo_oe {
             timeout-ms = <COMBO_TERM>;
             require-prior-idle-ms = <HM_PRIOR_IDLE>;
             key-positions = <9 23>;
-            bindings = <&kp DK_O_SLASH>;
+            bindings = <&kp DA_O_SLASH>;
         }
     };
 };
