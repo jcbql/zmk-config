@@ -131,7 +131,7 @@
             ak_GHT_to_GHG {
                 trigger-keys = <G>;
                 // press H followed by enabling the adaptive behavior for G by switching to AK_GHT for one press (sticky layer).
-                bindings = <&kp B &sl AK_GHT>;
+                bindings = <&kp H &sl AK_GHT>;
             };
         };
     };
