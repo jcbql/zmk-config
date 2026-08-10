@@ -62,13 +62,13 @@
         combo_ae {
             timeout-ms = <COMBO_TERM>;
             require-prior-idle-ms = <HM_PRIOR_IDLE>;
-            key-positions = <8 9>;
+            key-positions = <9 10>;
             bindings = <&kp DA_AE>;
         };
         combo_oe {
             timeout-ms = <COMBO_TERM>;
             require-prior-idle-ms = <HM_PRIOR_IDLE>;
-            key-positions = <9 23>;
+            key-positions = <10 24>;
             bindings = <&kp DA_O_SLASH>;
         };
     };
