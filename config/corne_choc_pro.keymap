@@ -63,13 +63,13 @@
             require-prior-idle-ms = <HM_PRIOR_IDLE>;
             key-positions = <8 9>;
             bindings = <&kp DA_AE>;
-        }
+        };
         combo_oe {
             timeout-ms = <COMBO_TERM>;
             require-prior-idle-ms = <HM_PRIOR_IDLE>;
             key-positions = <9 23>;
             bindings = <&kp DA_O_SLASH>;
-        }
+        };
     };
 };
 
