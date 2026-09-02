@@ -198,7 +198,7 @@
                 &trans &kp F1    &kp F2    &kp F5    &kp F6    &kp F12   &rgb_ug RGB_OFF        &rgb_ug RGB_BRI &kp LA(F12)  &kp PG_UP &kp UP   &kp PG_DN &kp LC(DA_AE)  &trans
                 &none  &kp LGUI  &kp LALT  &kp LCTRL &kp LSHFT &kp LC(A) &rgb_ug RGB_TOG        &rgb_ug RGB_BRD &kp LS(F12)  &kp LEFT  &kp DOWN &kp RIGHT &kp LC(DA_SQT) &none
                 &trans &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(Y)                                        &kp LA(LEFT) &kp HOME  &trans   &kp END   &kp LA(RIGHT)  &trans
-                                                     &trans    &trans    &trans                                 &SPACE       &trans    &kp F11
+                                                     &trans    &trans    &trans                                 &kp SPACE       &trans    &kp F11
             >;
         };
 
