@@ -186,10 +186,10 @@
 
         alpha_layer {
             bindings = <
-                &sys_lt SYSTEM ESC &kp X       &kp P       &kp D         &kp M         &kp K &kp C_MUTE            &kp C_VOL_UP &kp DA_MINUS &kp U        &kp O        &kp Y       &kp Z       &sys_lt SYSTEM ESC
-                &qu_q Q 0          &hml LGUI S &hml LALT N &hml LCTRL T  &hml LSHFT L  &kp F &kp C_PP              &kp C_VOL_DN &kp COMMA    &hmr LSHFT A &hmr LCTRL E &hmr LALT I &hmr LGUI C &kp W
-                &kp TAB            &kp V       &kp B       &kp G         &ak_H         &kp J                                    &kp DA_EQUAL &kp DOT      &kp BSPC     &kp DA_FSLH &kp DA_SQT  &kp DEL
-                                                           &caps_word    &lt NUM UNDER &lt NAV SPACE                            &lt SYM R    &kp RET      &kp ESC
+                &sys_lt SYSTEM ESC &kp X       &kp P       &kp D         &kp M            &kp K &kp C_MUTE            &kp C_VOL_UP &kp DA_MINUS &kp U        &kp O        &kp Y       &kp Z       &sys_lt SYSTEM ESC
+                &qu_q Q 0          &hml LGUI S &hml LALT N &hml LCTRL T  &hml LSHFT L     &kp F &kp C_PP              &kp C_VOL_DN &kp COMMA    &hmr LSHFT A &hmr LCTRL E &hmr LALT I &hmr LGUI C &kp W
+                &kp TAB            &kp V       &kp B       &kp G         &ak_H            &kp J                                    &kp DA_EQUAL &kp DOT      &kp BSPC     &kp DA_FSLH &kp DA_SQT  &kp DEL
+                                                           &caps_word    &lt NUM DK_UNDER &lt NAV SPACE                            &lt SYM R    &kp RET      &kp ESC
             >;
         };
 
@@ -198,7 +198,7 @@
                 &trans &kp F1    &kp F2    &kp F5    &kp F6    &kp F12   &rgb_ug RGB_OFF        &rgb_ug RGB_BRI &kp LA(F12)  &kp PG_UP &kp UP   &kp PG_DN &kp LC(DA_AE)  &trans
                 &none  &kp LGUI  &kp LALT  &kp LCTRL &kp LSHFT &kp LC(A) &rgb_ug RGB_TOG        &rgb_ug RGB_BRD &kp LS(F12)  &kp LEFT  &kp DOWN &kp RIGHT &kp LC(DA_SQT) &none
                 &trans &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(Y)                                        &kp LA(LEFT) &kp HOME  &trans   &kp END   &kp LA(RIGHT)  &trans
-                                                     &trans    &trans    &trans                                 &trans       &trans    &kp F11
+                                                     &trans    &trans    &trans                                 &SPACE       &trans    &kp F11
             >;
         };
 
