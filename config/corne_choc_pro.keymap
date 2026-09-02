@@ -144,6 +144,8 @@
         // Qu key
         qu_macro: qu_macro {
             compatible = "zmk,behavior-macro";
+            wait-ms = <1>;
+            tap-ms = <1>;
             #binding-cells = <0>;
             bindings = <&macro_tap &kp Q &kp U>;
         };
